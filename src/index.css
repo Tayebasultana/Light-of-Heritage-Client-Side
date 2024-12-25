@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* body */
+body {
+  background-color: #ffffff;
+  color: #5f5e5e;
+}
+body p{
+    color: rgb(81, 80, 80);
+}
+body h2{
+    color: #121212;
+}
+body.dark {
+    background-color: #121212; 
+    color: #ffffff;
+}
+
+
+
+/* navbar */
+.navbar {
+  background-color: #b9dee7; 
+}
+body.dark .navbar {
+    background-color: #1f1f1f; 
+}
+body.dark .navbar-start h2 {
+    color: #ffffff; 
+}
+
+  
+
+footer {
+  background-color: #b9dee7; 
+  color: #000000; 
+}
+
+body.dark footer {
+  background-color: #1f1f1f; 
+  color: #ffffff; 
+}
+
+

@@ -1,0 +1,159 @@
+/* Ensure the container has a relative position so the cards can be positioned inside it */
+.banner-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+  }
+  
+  /* Banner image with reduced opacity */
+  .banner-image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    /* opacity: 0.10; */
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: opacity 0.5s ease;
+  }
+  
+  /* Banner content (text) inside the image */
+  .banner-content {
+    z-index: 1;
+    /* background-color: rgba(0, 0, 0, 0.5);  */
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .banner-content h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
+  
+  .banner-content p {
+    font-size: 1.25rem;
+    margin-top: 10px;
+    color: #fff;
+  }
+  
+  /* Card container with 2 rows of cards */
+  .card-container {
+    position: absolute;
+    top: 15%;
+    right: 80px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+    gap: 20px;
+    z-index: 2;
+    max-width: 400px; /* Limit the card container's width */
+  }
+  
+  /* Card styles */
+  .card {
+    background-color: rgba(255, 255, 255, 0.9); /* Light background for cards */
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+  }
+  
+  .card img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .card h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .card p {
+    font-size: 1rem;
+    text-align: center;
+    color: #555;
+  }
+
+
+  /* for mobile device */
+  @media screen and (max-width: 576px) {
+    /* Hide the card container on mobile */
+    .card-container {
+      display: none;
+    }
+  
+    /* Adjust banner height for mobile */
+    .banner-image {
+      height: 200px; /* Set the banner height to 200px for mobile */
+    }
+   }
+
+
+
+  /* For small screens (mobile phones) */
+@media screen and (min-width: 576px) and (max-width: 990px) {
+    
+    .banner-image {
+        height: 100vh; /* Slightly taller banner for medium screens */
+      }
+  
+      .card-container {
+      position: absolute;
+      top: 0%;
+      right: 30px;
+      grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+      gap: 10px;
+      max-width: 400px;
+      z-index: 1; /* Cards should be below the banner content */
+    }
+    
+      .banner-content h1 {
+        font-size: 2rem;
+      }
+    
+      .banner-content p {
+        font-size: 1.1rem;
+      }
+    
+      .card-container {
+        position: absolute;
+        top: 0%;
+        right: 30px;
+        grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+        gap: 10px;
+        max-width: 400px;
+      }
+    
+      .card img {
+        height: 80px; /* Adjust card image height for medium screens */
+      }
+    
+      .card h3 {
+        font-size: 1rem;
+      }
+    
+      .card p {
+        font-size: 0.9rem;
+      }
+  }
+  
+  
