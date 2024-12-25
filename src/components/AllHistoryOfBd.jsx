@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import"./histry.css"
 
 // List of historical events and landmarks of Bangladesh
 const historyEvents = [
