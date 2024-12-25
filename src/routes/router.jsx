@@ -12,6 +12,7 @@ import MyArtifacts from "../pages/MyArtifacts";
 import LikedArtifacts from "../pages/LikedArtifacts";
 import ArtifactDetail from "../pages/ArtifactDetail";
 import Update from "../components/Update";
+import PrivetRoute from "../components/PrivetRoute/PrivetRoute";
 
   const router = createBrowserRouter([
     {
@@ -30,20 +31,20 @@ import Update from "../components/Update";
         },
         {
             path:"/add-artifacts",
-            element:<AddArtifacts></AddArtifacts>
+            element:<PrivetRoute><AddArtifacts></AddArtifacts></PrivetRoute>
         },
         {
             path:"/my-artifacts",
-            element:<MyArtifacts></MyArtifacts>
+            element:<PrivetRoute><MyArtifacts></MyArtifacts></PrivetRoute>
         },
         {
             path:"/liked-artifacts",
-            element:<LikedArtifacts></LikedArtifacts>,
+            element:<PrivetRoute><LikedArtifacts></LikedArtifacts></PrivetRoute>,
             loader:({params}) => fetch(`http://localhost:5000/liked-artifacts/${params.email}`)
         },
         {
             path:"/artifacts/:id",
-            element:<ArtifactDetail></ArtifactDetail>,
+            element:<PrivetRoute><ArtifactDetail></ArtifactDetail></PrivetRoute>,
             loader:({params}) => fetch(`http://localhost:5000/artifacts/${params.id}`)
         },
         {
