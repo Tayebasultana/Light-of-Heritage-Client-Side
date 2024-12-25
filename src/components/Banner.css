@@ -96,6 +96,10 @@
 
   /* for mobile device */
   @media screen and (max-width: 576px) {
+
+    .banner-container {
+      height: 200px;
+    }
     /* Hide the card container on mobile */
     .card-container {
       display: none;

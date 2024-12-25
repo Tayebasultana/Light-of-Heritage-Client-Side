@@ -47,7 +47,7 @@ const Navbar = () => {
       </div>
       <ul
         tabIndex={0}
-        className="menu menu-sm dropdown-content rounded-box z-[1] mt-3 w-52 p-2 shadow ">
+        className="menu menu-sm dropdown-content bg-[#c5e1e8] text-black dark:text-white dark:bg-[#1d232a] rounded-box z-[100] mt-3 w-52 p-2 shadow ">
         <NavLink
           to="/"
           className={({ isActive }) =>
@@ -57,8 +57,8 @@ const Navbar = () => {
             }>
           Home
         </NavLink>
-        <NavLink to="/all-visa" className={({ isActive }) => isActive? "text-black" : ""}>All Artifacts</NavLink>
-        <NavLink to ="/add-visa" className={({ isActive }) => isActive? "text-black" : ""}>Add Artifacts</NavLink>
+        <NavLink to="/all-artifacts" className={({ isActive }) => isActive? "text-black" : ""}>All Artifacts</NavLink>
+        <NavLink to ="/add-artifacts" className={({ isActive }) => isActive? "text-black" : ""}>Add Artifacts</NavLink>
       </ul>
     </div>
   </div>

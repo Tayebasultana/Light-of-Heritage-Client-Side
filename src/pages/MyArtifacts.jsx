@@ -77,7 +77,7 @@ const MyArtifacts = () => {
                   MY ADDED ARTIFACTS
               </h2>
           </div>
-           <div className="visa-data grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 px-20 py-7">
+           <div className="visa-data grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 px-4 md:px-7 lg:px-20 py-7">
             {artifactData.length > 0 ? (
               artifactData.map((artifact) => (
                 <div className="">
