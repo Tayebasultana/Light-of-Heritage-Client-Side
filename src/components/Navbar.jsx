@@ -26,7 +26,7 @@ const Navbar = () => {
   <div className="navbar-start">
 
   <div className="navbar-center md:navbar-center lg:navbar-start">
-    <h2 className="font-bold text-2xl ">Assignment</h2>
+    <h2 className="font-bold text-2xl ">Light of Heritage</h2>
   </div>
 
 
