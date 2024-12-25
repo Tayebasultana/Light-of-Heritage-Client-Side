@@ -63,7 +63,7 @@ const Banner = () => {
         {cards.map((card) => (
           <div
             key={card.id}
-            className="card "
+            className="banner-card"
             onClick={() => handleCardClick(card)}
           >
             <img src={card.image} alt={card.title} />
