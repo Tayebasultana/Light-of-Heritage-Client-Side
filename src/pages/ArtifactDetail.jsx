@@ -1,11 +1,16 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { useLoaderData } from "react-router-dom";
+import { authContext } from "../components/AuthProvider/AuthProvider";
 
 const ArtifactDetail = () => {
     const artifact = useLoaderData();
     const [likes, setLikes] = useState(artifact.likes || 0);
+    const {user} = useContext(authContext)
 
-    const {
+    const { artifactName, artifactImage, artifactType, historicalContext, createdAt, discoveredAt, discoveredBy, presentLocation, _id} = artifact;
+
+    const likeData = {
+        artifactId: _id,
         artifactName,
         artifactImage,
         artifactType,
@@ -14,9 +19,31 @@ const ArtifactDetail = () => {
         discoveredAt,
         discoveredBy,
         presentLocation,
-    } = artifact;
+        userEmail: user.email,
+    };
+    console.log("Like Data:", likeData);
+    
 
     const handleLike = () => {
+
+        fetch("http://localhost:5000/likes", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(likeData),
+        })
+            .then((res) => res.json())
+            .then((data) => {
+                console.log("Like Response:", data);
+                alert("Liked successfully!");
+            })
+            .catch((err) => console.error("Error posting like:", err));
+        
+
+
+
+
         fetch(`http://localhost:5000/artifacts/${artifact._id}/like`, {
             method: "PUT",
             headers: {

@@ -10,7 +10,7 @@ const AllArtifacts = () => {
         <div>
             {/* Tabs */}
             <Tabs>
-                <TabList className=" items-center justify-center bg-gray-100 dark:bg-gray-600 p-4 rounded-lg shadow-lg gap-4 grid grid-cols-3 md:grid-5">
+                <TabList className=" items-center justify-center bg-gray-100 dark:bg-gray-600 p-4 rounded-lg shadow-lg gap-4 flex flex-wrap">
                     <Tab
                         className="px-6 py-2 rounded-lg cursor-pointer text-lg font-semibold hover:bg-blue-300 hover:text-black transition-all duration-300"
                         selectedClassName="bg-blue-200 text-white"
