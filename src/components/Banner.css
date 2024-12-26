@@ -33,6 +33,7 @@
   .banner-content h1 {
     font-size: 3rem;
     margin-bottom: 10px;
+    color: #fff;
   }
   
   .banner-content p {
@@ -108,6 +109,10 @@
     /* Adjust banner height for mobile */
     .banner-image {
       height: 200px; /* Set the banner height to 200px for mobile */
+    }
+
+    .banner-content h1 {
+      font-size: 2rem;
     }
    }
 

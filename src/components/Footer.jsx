@@ -9,7 +9,7 @@ const Footer = () => {
           <h3 className="text-xl font-bold  mb-4">Contact Us</h3>
           <p className="mb-2">📍 123 Language Lane, Word City, 45678</p>
           <p className="mb-2">📞 +1 (123) 456-7890</p>
-          <p>📧 support@....... .com</p>
+          <p>📧 support@LightOfHeritage.com</p>
         </div>
 
         {/* Social Media Links */}
@@ -54,7 +54,7 @@ const Footer = () => {
       {/* Footer Bottom */}
       <div className="border-t border-gray-700 mt-10 pt-5 text-center">
         <p className="text-sm">
-          © {new Date().getFullYear()} .......   . All rights reserved.
+          © {new Date().getFullYear()} Light of Heritage . All rights reserved.
         </p>
       </div>
     </footer>

@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import { authContext } from "../components/AuthProvider/AuthProvider";
+import toast from "react-hot-toast";
 
 const ArtifactDetail = () => {
     const artifact = useLoaderData();
@@ -36,7 +37,7 @@ const ArtifactDetail = () => {
             .then((res) => res.json())
             .then((data) => {
                 console.log("Like Response:", data);
-                alert("Liked successfully!");
+                toast.success('Liked successfully!');
             })
             .catch((err) => console.error("Error posting like:", err));
         
@@ -61,11 +62,11 @@ const ArtifactDetail = () => {
         <div className="hero bg-gradient-to-r from-blue-200 via-blue-100 to-blue-50 min-h-screen py-16">
             <div className="hero-content flex-col lg:flex-row lg:gap-12 px-6 lg:px-20">
                 {/* Artifact Image */}
-                <div className="flex-shrink-0">
+                <div className="flex-shrink-0 max-w-lg">
                     <img
                         src={artifactImage}
                         alt={artifactName}
-                        className="max-w-lg rounded-lg shadow-lg border-4 border-blue-300"
+                        className="w-100% rounded-lg shadow-lg border-4 border-blue-300"
                     />
                 </div>
 

@@ -121,7 +121,7 @@ const MyArtifacts = () => {
            </div>
               ))
             ) : (
-              <p className='text-center text-red-500 col-span-4 pb-40'>No visas found for this email.</p>
+              <p className='text-center text-red-500 col-span-4 pb-40'>No artifact found for this email.</p>
             )}
           </div>
          </div>
