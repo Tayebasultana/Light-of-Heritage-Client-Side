@@ -57,8 +57,8 @@ const Navbar = () => {
             }>
           Home
         </NavLink>
-        <NavLink to="/all-artifacts" className={({ isActive }) => isActive? "text-black" : ""}>All Artifacts</NavLink>
-        <NavLink to ="/add-artifacts" className={({ isActive }) => isActive? "text-black" : ""}>Add Artifacts</NavLink>
+        <NavLink to="/all-artifacts" className={({ isActive }) => isActive? "text-black dark:text-blue-300" : "text-white dark:text-gray-300"}>All Artifacts</NavLink>
+        <NavLink to ="/add-artifacts" className={({ isActive }) => isActive? "text-black dark:text-blue-300" : "text-white dark:text-gray-300"}>Add Artifacts</NavLink>
       </ul>
     </div>
   </div>
