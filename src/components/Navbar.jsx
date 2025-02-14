@@ -26,7 +26,7 @@ const Navbar = () => {
   <div className="navbar-start">
 
   <div className="navbar-center md:navbar-center lg:navbar-start">
-    <h2 className="font-bold text-2xl ">Light of Heritage</h2>
+    <NavLink to="/" className="font-bold text-2xl text-black dark:text-white">Light of Heritage</NavLink>
   </div>
 
 
