@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import toast from "react-hot-toast";
 
 const RatingAndReview = () => {
   const [rating, setRating] = useState(0);
@@ -9,7 +10,7 @@ const RatingAndReview = () => {
   // Function to fetch reviews
   const fetchReviews = async () => {
     try {
-      const response = await fetch("http://localhost:5000/user/reviews");
+      const response = await fetch("https://assignment-eleven-server-side-phi.vercel.app/user/reviews");
       const data = await response.json();
       setReviews(data);
     } catch (error) {
@@ -33,7 +34,7 @@ const RatingAndReview = () => {
     };
 
     try {
-      const response = await fetch("http://localhost:5000/user/reviews", {
+      const response = await fetch("https://assignment-eleven-server-side-phi.vercel.app/user/reviews", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -42,7 +43,7 @@ const RatingAndReview = () => {
       });
 
       if (response.ok) {
-        alert("Review submitted successfully!");
+        toast.success('Review submitted successfully!');
         setRating(0);
         setReviewText("");
         setUserName("");

@@ -23,6 +23,8 @@ body.dark {
 /* navbar */
 .navbar {
   background-color: #b9dee7; 
+  backdrop-filter: blur(15px); 
+  -webkit-backdrop-filter: blur(15px); 
 }
 body.dark .navbar {
     background-color: #1f1f1f; 
@@ -44,3 +46,6 @@ body.dark footer {
 }
 
 
+body{
+  margin: 0 !important;
+}

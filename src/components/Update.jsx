@@ -33,7 +33,7 @@ const Update = () => {
     };
 
     // Send updated artifact data to the server
-    fetch(`http://localhost:5000/artifacts/${_id}`, {
+    fetch(`https://assignment-eleven-server-side-phi.vercel.app/artifacts/${_id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",

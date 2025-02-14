@@ -6,7 +6,7 @@ const TopLikedArtifacts = () => {
 
   useEffect(() => {
     
-    fetch('http://localhost:5000/artifacts') 
+    fetch('https://assignment-eleven-server-side-phi.vercel.app/artifacts') 
       .then((res) => res.json())
       .then((data) => {
         

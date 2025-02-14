@@ -22,12 +22,12 @@ const ArtifactDetail = () => {
         presentLocation,
         userEmail: user.email,
     };
-    console.log("Like Data:", likeData);
+    // console.log("Like Data:", likeData);
     
 
     const handleLike = () => {
 
-        fetch("http://localhost:5000/likes", {
+        fetch("https://assignment-eleven-server-side-phi.vercel.app/likes", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -36,7 +36,7 @@ const ArtifactDetail = () => {
         })
             .then((res) => res.json())
             .then((data) => {
-                console.log("Like Response:", data);
+                // console.log("Like Response:", data);
                 toast.success('Liked successfully!');
             })
             .catch((err) => console.error("Error posting like:", err));
@@ -45,7 +45,7 @@ const ArtifactDetail = () => {
 
 
 
-        fetch(`http://localhost:5000/artifacts/${artifact._id}/like`, {
+        fetch(`https://assignment-eleven-server-side-phi.vercel.app/artifacts/${artifact._id}/like`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",

@@ -10,7 +10,7 @@ const LikedArtifacts = () => {
 
     useEffect(() => {
         if (user?.email) {
-            fetch(`http://localhost:5000/likes?userEmail=${user.email}`)
+            fetch(`https://assignment-eleven-server-side-phi.vercel.app/likes?userEmail=${user.email}`)
                 .then((res) => res.json())
                 .then((data) => {
                     setLikedArtifacts(data);
@@ -35,7 +35,7 @@ const LikedArtifacts = () => {
         }).then((result) => {
             if (result.isConfirmed) {
                 setDeletingId(_id);
-                fetch(`http://localhost:5000/likes/${_id}`, {
+                fetch(`https://assignment-eleven-server-side-phi.vercel.app/likes/${_id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())

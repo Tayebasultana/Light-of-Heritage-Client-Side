@@ -38,9 +38,9 @@ const AddArtifacts = () => {
       likes: 0,
       email,
     };
-    console.log(newArtifact)
+    // console.log(newArtifact)
 
-    fetch('http://localhost:5000/artifacts', {
+    fetch('https://assignment-eleven-server-side-phi.vercel.app/artifacts', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

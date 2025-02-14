@@ -27,7 +27,7 @@ import PrivetRoute from "../components/PrivetRoute/PrivetRoute";
         {
             path:"/all-artifacts",
             element:<AllArtifacts></AllArtifacts>,
-            loader: () => fetch('http://localhost:5000/artifacts')
+            loader: () => fetch('https://assignment-eleven-server-side-phi.vercel.app/artifacts')
         },
         {
             path:"/add-artifacts",
@@ -40,17 +40,17 @@ import PrivetRoute from "../components/PrivetRoute/PrivetRoute";
         {
             path:"/liked-artifacts",
             element:<PrivetRoute><LikedArtifacts></LikedArtifacts></PrivetRoute>,
-            loader:({params}) => fetch(`http://localhost:5000/liked-artifacts/${params.email}`)
+            loader:({params}) => fetch(`https://assignment-eleven-server-side-phi.vercel.app/liked-artifacts/${params.email}`)
         },
         {
             path:"/artifacts/:id",
             element:<PrivetRoute><ArtifactDetail></ArtifactDetail></PrivetRoute>,
-            loader:({params}) => fetch(`http://localhost:5000/artifacts/${params.id}`)
+            loader:({params}) => fetch(`https://assignment-eleven-server-side-phi.vercel.app/artifacts/${params.id}`)
         },
         {
             path:"/update/:id",
             element:<Update></Update>,
-            loader: ({params}) => fetch(`http://localhost:5000/artifacts/${params.id}`)
+            loader: ({params}) => fetch(`https://assignment-eleven-server-side-phi.vercel.app/artifacts/${params.id}`)
         },
       ]
     },

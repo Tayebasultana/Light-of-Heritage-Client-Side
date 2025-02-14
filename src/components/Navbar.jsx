@@ -19,10 +19,10 @@ const Navbar = () => {
     
 
     return (
-        <div className="relative">
+        <div className="sticky top-0 z-40 opacity-80 bg-[#c5e1e8] dark:bg-[#1d232a] dark:text-white">
       {/* <div><img src={plane} alt="" className="h-24 absolute left-64 -top-2"/></div> */}
 
-<div className="navbar px-2 md:px-7 lg:px-24 mx-auto">
+<div className="navbar px-2 md:px-7 lg:px-24 mx-auto ">
   <div className="navbar-start">
 
   <div className="navbar-center md:navbar-center lg:navbar-start">

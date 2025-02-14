@@ -15,7 +15,7 @@ const MyArtifacts = () => {
     if (user && user.email) {
       setEmail(user.email);  
 
-      fetch(`http://localhost:5000/my-artifacts?email=${user.email}`)
+      fetch(`https://assignment-eleven-server-side-phi.vercel.app/my-artifacts?email=${user.email}`)
         .then((res) => res.json())
         .then((data) => {
             setArtifactData(data); 
@@ -24,7 +24,7 @@ const MyArtifacts = () => {
           console.error("Error fetching visa data:", error);
         });
     } else {
-      console.log("User not logged in or email not available");
+      // console.log("User not logged in or email not available");
     }
   }, [user]); 
 
@@ -39,7 +39,7 @@ const MyArtifacts = () => {
         confirmButtonText: "Yes, delete it!"
     }).then((result) => {
         if (result.isConfirmed) {
-            fetch(`http://localhost:5000/my-artifacts/${_id}`, {
+            fetch(`https://assignment-eleven-server-side-phi.vercel.app/my-artifacts/${_id}`, {
                 method: 'DELETE'
             })
             .then(res => res.json())
