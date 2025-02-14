@@ -3,25 +3,33 @@ import { NavLink } from 'react-router-dom';
 
 const TopLikedArtifacts = () => {
   const [artifacts, setArtifacts] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    
-    fetch('https://assignment-eleven-server-side-phi.vercel.app/artifacts') 
+    fetch('https://assignment-eleven-server-side-phi.vercel.app/artifacts')
       .then((res) => res.json())
       .then((data) => {
-        
         const sortedArtifacts = data
-          .sort((a, b) => b.likes - a.likes) 
-          .slice(0, 6); 
-
+          .sort((a, b) => b.likes - a.likes)
+          .slice(0, 6);
         setArtifacts(sortedArtifacts);
+        setLoading(false); 
       })
-      .catch((error) => console.error('data fetching problem for :', error));
+      .catch((error) => {
+        console.error('Error in data fetching:', error);
+        setLoading(false); 
+      });
   }, []);
 
   return (
-    <div className="bg-gray-100 py-10">
+    <div className="bg-gray-100 py-10 text-center">
       <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">Top Liked Artifacts</h2>
+      {/* Loading Spinner */}
+      {loading && (
+        <div id="loadingSpinner" className="loading">
+          <div className="spinner"></div> 
+        </div>
+      )}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto px-4">
         {artifacts.map((artifact) => (
           <div

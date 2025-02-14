@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 
 const ReviewsDisplay = () => {
   const [reviews, setReviews] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchReviews = async () => {
@@ -9,7 +10,9 @@ const ReviewsDisplay = () => {
         const response = await fetch("https://assignment-eleven-server-side-phi.vercel.app/user/reviews");
         const data = await response.json();
         setReviews(data);
+        setLoading(false); 
       } catch (error) {
+        setLoading(false); 
         console.error("Error fetching reviews:", error);
       }
     };
@@ -20,6 +23,12 @@ const ReviewsDisplay = () => {
   return (
     <div className="bg-gradient-to-r from-blue-200 to-white p-5 text-center py-4 md:py-10">
       <h2 className="text-3xl font-bold pb-4">User Reviews</h2>
+      {/* Loading Spinner */}
+      {loading && (
+        <div id="loadingSpinner" className="loading">
+          <div className="spinner"></div> 
+        </div>
+      )}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
       {reviews.map((review, index) => (
         <div key={index} className=" card bg-blue-200 text-center py-4 border-b ">
