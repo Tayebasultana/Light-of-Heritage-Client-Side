@@ -48,8 +48,11 @@ _No credentials required to browse artifacts._
 
 To run the project locally:
 
-```bash
-git clone <repository-url>
-cd light-of-heritage
-npm install
-npm run dev
+1.git clone <repository-url>
+  cd light-of-heritage
+  npm install
+  npm run dev
+
+2.Add your envirnment variable by making env.local file
+
+
