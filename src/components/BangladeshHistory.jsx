@@ -1,6 +1,9 @@
 import React from 'react';
+import {  useNavigate } from 'react-router-dom';
 
 const BangladeshHistory = () => {
+    const navigate = useNavigate();
+
   return (
     <section className="flex flex-col md:flex-row items-center justify-center gap-10 px-6 py-16 bg-white dark:bg-[#1f1f1f] dark:text-white">
       {/* Image Section */}
@@ -15,7 +18,7 @@ const BangladeshHistory = () => {
       {/* Text Content */}
       <div className="max-w-xl">
         <h4 className="text-lg font-normal mb-2">
-          WELCOME <span className="text-blue-700 dark:text-blue-300 font-bold">TO BANGLADESH History</span>
+          WELCOME <span className="text-blue-700 dark:text-blue-300 font-bold">TO BANGLADESH HISTORY</span>
         </h4>
         <h1 className="text-4xl text-start dark:text-white md:text-[38px] font-extrabold mb-6 leading-snug">
           About The Glorious <br /> History Of Bangladesh
@@ -26,9 +29,13 @@ const BangladeshHistory = () => {
         <p className="text-base dark:text-gray-300 leading-relaxed mb-6">
           Our culture reflects the spirit of independence, and our people continue to thrive with pride and dignity. Bangladesh stands today as a symbol of freedom and hope.
         </p>
-        <button className="btn btn-primary text-white font-bold py-3 px-6 rounded">
+        <button
+          onClick={() => navigate('/bangladesh-history')}
+          className="bg-blue-700 hover:bg-blue-800 text-white font-bold py-3 px-6 rounded"
+        >
           EXPLORE
         </button>
+
       </div>
     </section>
   );

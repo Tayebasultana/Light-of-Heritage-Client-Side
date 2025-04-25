@@ -13,6 +13,7 @@ import LikedArtifacts from "../pages/LikedArtifacts";
 import ArtifactDetail from "../pages/ArtifactDetail";
 import Update from "../components/Update";
 import PrivetRoute from "../components/PrivetRoute/PrivetRoute";
+import History from "../pages/History";
 
   const router = createBrowserRouter([
     {
@@ -32,6 +33,10 @@ import PrivetRoute from "../components/PrivetRoute/PrivetRoute";
         {
             path:"/add-artifacts",
             element:<PrivetRoute><AddArtifacts></AddArtifacts></PrivetRoute>
+        },
+        {
+            path: "/bangladesh-history",
+            element: <History></History>
         },
         {
             path:"/my-artifacts",
