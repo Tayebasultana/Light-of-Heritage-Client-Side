@@ -55,4 +55,21 @@ To run the project locally:
 
 2.Add your envirnment variable by making env.local file
 
+## 💡 Contributing
+
+Contributions are welcome!  
+Feel free to **fork** the repository, make your changes, and submit a **pull request**.
+
+For major changes, please **open an issue first** to discuss what you'd like to do.
+
+Your ideas, suggestions, and bug reports are highly appreciated!
+
+---
+
+## 📜 License
+
+This project is licensed under the **MIT License**.  
+See the [LICENSE](./LICENSE) file for more details.
+
+
 
