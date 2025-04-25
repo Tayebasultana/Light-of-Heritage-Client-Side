@@ -59,7 +59,7 @@ const RatingAndReview = () => {
   };
 
   return (
-    <div className="bg-black py-5 md:py-10 lg:py-16 text-center">
+    <div className="bg-gray-100 dark:bg-black py-5 md:py-10 lg:py-16 text-center">
       <div className="bg-gray-800 border-2 rounded-lg border-gray-700 w-fit mx-auto  py-4 px-7">
         <h2 className="text-3xl font-bold text-white">Rate and Review</h2>
 

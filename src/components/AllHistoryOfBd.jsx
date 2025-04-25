@@ -68,7 +68,7 @@ const AllHistoryOfBd = () => {
   };
 
   return (
-    <div className="w-11/12 mx-auto py-5 md:py-10 lg:py-16 ">
+    <div className=" w-11/12 mx-auto py-5 md:py-10 lg:py-16 ">
       <h1 className="text-3xl font-bold dark:text-white">Historical History of Bangladesh</h1>
 
       <div className="faq-section">
