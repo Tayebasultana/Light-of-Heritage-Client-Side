@@ -28,7 +28,8 @@ Light of Heritage is an interactive web application that showcases valuable hist
 **Backend:**
 
 - Express.js
-- MongoDB (No Mongoose)
+- MongoDB
+- Node
 
 **Others:**
 
