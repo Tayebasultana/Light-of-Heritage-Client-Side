@@ -2,42 +2,54 @@
 
 Welcome to **Light of Heritage**, an engaging platform dedicated to exploring and preserving the historical artifacts and cultural heritage of Bangladesh. This project brings history to life, offering users a chance to delve into significant artifacts and stories that shaped our past.
 
-## 🌍 Purpose
-The primary goal of this project is to create an interactive platform where users can:
-- Discover historical artifacts and their context.
-- Like their favorite artifacts.
-- Explore the rich cultural heritage of Bangladesh.
+## 🌍 Project Overview
 
-## 🔗 Live URL
-[Visit the live project](#) _(Add your deployed URL here)_
+Light of Heritage is an interactive web application that showcases valuable historical artifacts from Bangladesh. Users can browse, like, and save artifacts while learning about their historical significance. The goal is to educate and inspire people through the rich cultural heritage of the nation.
 
-## ✨ Key Features
-- **Artifact Exploration**: Users can browse through a collection of historical artifacts with detailed descriptions and images.
-- **Like and Save**: Users can like their favorite artifacts, which are saved to their personal collection.
-- **Responsive Design**: Fully optimized for desktop and mobile devices.
+## ✨ Features
 
-## 📦 npm Packages Used
-Here are some of the key npm packages used in this project:
+- 🔍 **Artifact Exploration** – Browse detailed historical artifacts with images and descriptions.
+- ❤️ **Like & Save** – Users can like and save their favorite artifacts to a personal collection.
+- 🔄 **Filter by Category** – View artifacts by types like Tools, Weapons, Writings, etc.
+- 📱 **Responsive Design** – Optimized for desktop, tablet, and mobile devices.
+- 🌙 **Dark Mode** – Seamless theme switching experience.
+- 📦 **Client-side Pagination** – Fast and dynamic pagination for large datasets.
 
-- **react-router-dom**: For routing and navigation.
-- **sweetalert2**: For interactive alerts and confirmations.
-- **tailwindcss**: For efficient and responsive styling.
+## 🛠 Tech Stack
 
-## 🛠 Installation
-To run this project locally, follow these steps:
+**Frontend:**
 
-1. Clone the repository:
-   ```bash
-   git clone <repository-url>
-2. cd light-of-heritage
-3. npm install
-4. npm run dev
+- React
+- Tailwind CSS
+- React Router DOM
+- React Tabs
+- SweetAlert2
 
-## 💡 Contributing
+**Backend:**
 
-Contributions are welcome! Feel free to fork the repository and submit pull requests. For major changes, please open an issue first to discuss what you would like to change.
+- Express.js
+- MongoDB (No Mongoose)
 
-## 📜 License
+**Others:**
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
+- Firebase (Hosting & Auth)
+- OpenWeather API (Future Weather-based Features)
 
+## 🚀 Live Link
+
+🔗 [Visit the Project](https://assignment-eleven-9f89f.web.app)
+
+## 🧪 Default Credentials (If Needed)
+
+_No credentials required to browse artifacts._  
+🔐 (If authentication is implemented in future, you can add default test credentials here.)
+
+## ⚙️ Setup Instructions
+
+To run the project locally:
+
+```bash
+git clone <repository-url>
+cd light-of-heritage
+npm install
+npm run dev
